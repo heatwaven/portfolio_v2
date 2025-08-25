@@ -186,7 +186,7 @@ export default function Portfolio() {
           {/* Animated gradient border */}
           <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 rounded-full animate-gradient blur-lg opacity-70"></div>
           <img 
-            src="/portfolio_v2/profile.jpg" 
+            src="/profile.jpg" 
             alt="Marko Pavlovic"
             className="relative rounded-full w-full h-full object-cover border-4 border-white/10"
           />
