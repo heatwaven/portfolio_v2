@@ -99,7 +99,7 @@ const workExperience = [
   "Languages": ["Java", "C#", "SQL", "TypeScript", "JavaScript"],
   "Backend & Frameworks": ["Spring Boot", "Hibernate", "Camunda (BPMN)", "Node.js", "Express", "Keycloak"],
   "DevOps & Cloud": ["Docker", "Kubernetes", "Helm", "OpenShift", "ArgoCD", "GitLab Runner", "AWS"],
-  "Database": ["PostgreSQL", "MySQL", "LDAP"]
+  "Database": ["PostgreSQL", "MySQL", "LDAP", "Oracle"]
 };
 
   return (
