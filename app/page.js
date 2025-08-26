@@ -59,36 +59,48 @@ export default function Portfolio() {
     }
   ];
 
-  const workExperience = [
-    {
-      role: "Senior Full Stack Developer",
-      company: "Tech Innovations Inc.",
-      period: "2022 - Present",
-      description: "Leading development of cloud-native applications, mentoring junior developers, and architecting scalable microservices solutions.",
-      highlights: ["Reduced API response time by 40%", "Led team of 5 developers", "Implemented CI/CD pipeline"]
-    },
-    {
-      role: "Full Stack Developer",
-      company: "Digital Solutions Co.",
-      period: "2020 - 2022",
-      description: "Developed and maintained multiple client projects using modern web technologies, focusing on performance optimization and user experience.",
-      highlights: ["Built 10+ production applications", "Improved site performance by 60%", "Integrated third-party APIs"]
-    },
-    {
-      role: "Frontend Developer",
-      company: "Creative Agency",
-      period: "2018 - 2020",
-      description: "Created responsive, pixel-perfect interfaces from design mockups, ensuring cross-browser compatibility and accessibility standards.",
-      highlights: ["Developed 20+ responsive websites", "Improved accessibility scores to 95+", "Reduced bundle size by 35%"]
-    }
-  ];
+const workExperience = [
+  {
+    role: "Software Engineer",
+    company: "Kontron Transportation GmbH",
+    period: "June 2024 - Present",
+    description: "Developing and optimizing enterprise transportation solutions in an agile environment, focusing on performance improvements and system reliability.",
+    highlights: [
+      "Optimized Camunda workflows improving execution speed by 50%+",
+      "Implemented Keycloak authentication & LDAP integration",
+      "Managed deployments with Helm, ArgoCD & Kubernetes"
+    ]
+  },
+  {
+    role: "Software Engineer Intern",
+    company: "EBCONT enterprise GmbH",
+    period: "Feb 2024 - May 2024",
+    description: "Contributed to enterprise software development, focusing on code refactoring and performance optimization.",
+    highlights: [
+      "Refactored C# applications using AutoMapper",
+      "Improved UI performance through pagination",
+      "Resolved issues for newly deployed systems"
+    ]
+  },
+  {
+    role: "Software Engineer Intern",
+    company: "s IT Solutions",
+    period: "July 2020 - Aug 2020",
+    description: "Developed modern web applications with focus on security and authentication.",
+    highlights: [
+      "Developed Angular app for secure JWT token creation",
+      "Implemented authentication features",
+      "Frontend development with TypeScript"
+    ]
+  }
+];
 
   const skills = {
-    "Frontend": ["React", "Next.js", "Vue.js", "TypeScript", "Tailwind CSS", "Redux"],
-    "Backend": ["Node.js", "Python", "Express", "FastAPI", "GraphQL", "REST APIs"],
-    "Database": ["PostgreSQL", "MongoDB", "Redis", "MySQL", "Prisma ORM"],
-    "DevOps": ["Docker", "AWS", "CI/CD", "Kubernetes", "Nginx", "GitHub Actions"]
-  };
+  "Languages": ["Java", "C#", "SQL", "TypeScript", "JavaScript"],
+  "Backend & Frameworks": ["Spring Boot", "Hibernate", "Camunda (BPMN)", "Node.js", "Express", "Keycloak"],
+  "DevOps & Cloud": ["Docker", "Kubernetes", "Helm", "OpenShift", "ArgoCD", "GitLab Runner", "AWS"],
+  "Database": ["PostgreSQL", "MySQL", "LDAP"]
+};
 
   return (
     <div className={`min-h-screen transition-colors duration-500 ${
@@ -159,6 +171,8 @@ export default function Portfolio() {
       </nav>
 
       {/* Hero Section mit Bild */}
+
+{/* Hero Section mit Bild */}
 <section className="min-h-screen flex items-center justify-center relative px-6">
   <div className="max-w-7xl mx-auto">
     <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -173,10 +187,43 @@ export default function Portfolio() {
         <p className={`text-xl md:text-2xl mb-8 ${
           isDarkMode ? 'text-gray-300' : 'text-gray-600'
         }`}>
-          Full Stack Developer specializing in building exceptional digital experiences
+          Backend-focused Full Stack Developer specializing in scalable architectures and high-performance APIs
         </p>
         <div className="flex gap-4 justify-center lg:justify-start flex-wrap">
-          {/* Buttons */}
+          <a 
+            href="/cv.pdf" 
+            download
+            className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold hover:scale-105 transition-transform flex items-center gap-2 text-white"
+          >
+            <Download size={20} />
+            Download CV
+          </a>
+          <a 
+            href="https://github.com/heatwaven" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={`px-8 py-3 border rounded-full font-semibold transition-all flex items-center gap-2 ${
+              isDarkMode 
+                ? 'border-gray-600 hover:bg-white/10 text-white' 
+                : 'border-gray-300 hover:bg-gray-100 text-gray-900'
+            }`}
+          >
+            <Github size={20} />
+            GitHub
+          </a>
+          <a 
+            href="https://linkedin.com/in/marko-pavlovic-2002" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={`px-8 py-3 border rounded-full font-semibold transition-all flex items-center gap-2 ${
+              isDarkMode 
+                ? 'border-gray-600 hover:bg-white/10 text-white' 
+                : 'border-gray-300 hover:bg-gray-100 text-gray-900'
+            }`}
+          >
+            <Linkedin size={20} />
+            LinkedIn
+          </a>
         </div>
       </div>
       
@@ -195,6 +242,8 @@ export default function Portfolio() {
     </div>
   </div>
 </section>
+
+
      {/* About Section - Alternative */}
 <section className="py-20 px-6" id="about">
   <div className="max-w-7xl mx-auto">
@@ -203,24 +252,24 @@ export default function Portfolio() {
       About Me
     </h2>
     
-    {/* About Text */}
-    <div className="max-w-4xl mx-auto mb-16">
-      <p className={`text-lg mb-6 leading-relaxed ${
-        isDarkMode ? 'text-gray-300' : 'text-gray-700'
-      }`}>
-        I&apos;m a passionate Full Stack Developer with 6+ years of experience building web applications that solve real-world problems. I specialize in JavaScript ecosystems and cloud technologies.
-      </p>
-      <p className={`text-lg mb-6 leading-relaxed ${
-        isDarkMode ? 'text-gray-300' : 'text-gray-700'
-      }`}>
-        My journey in tech started with a curiosity about how websites work, which evolved into a career focused on creating efficient, scalable, and user-friendly applications. I believe in writing clean, maintainable code and staying updated with the latest industry trends.
-      </p>
-      <p className={`text-lg leading-relaxed ${
-        isDarkMode ? 'text-gray-300' : 'text-gray-700'
-      }`}>
-        When I&apos;m not coding, you&apos;ll find me contributing to open-source projects, writing technical blogs, or exploring new technologies. I&apos;m always excited about tackling challenging problems and turning ideas into reality.
-      </p>
-    </div>
+ {/* About Text */}
+<div className="max-w-4xl mx-auto mb-16">
+  <p className={`text-lg mb-6 leading-relaxed ${
+    isDarkMode ? 'text-gray-300' : 'text-gray-700'
+  }`}>
+    I&apos;m a passionate Software Developer with 9 years of experience in creating robust applications. My journey began at HTL Donaustadt, where I discovered my passion for programming and have been dedicated to it ever since.
+  </p>
+  <p className={`text-lg mb-6 leading-relaxed ${
+    isDarkMode ? 'text-gray-300' : 'text-gray-700'
+  }`}>
+    Throughout my career, I&apos;ve worked on numerous projects ranging from web applications using various frameworks to complex backend systems. While I&apos;m proficient in JavaScript and modern web technologies, my specialization and preference lies in Java development, where I excel at building scalable, enterprise-level solutions.
+  </p>
+  <p className={`text-lg leading-relaxed ${
+    isDarkMode ? 'text-gray-300' : 'text-gray-700'
+  }`}>
+    My educational background includes a Matura from HTL Donaustadt in Software Engineering, a Bachelor of Science in Computer Science, and I&apos;m currently pursuing my Master&apos;s degree in Software Engineering. With 2 years of professional experience complemented by valuable internships, I bring both academic knowledge and practical expertise to every project.
+  </p>
+</div>
     
     {/* Skills - Als Tags */}
     <div className="space-y-8">
@@ -374,7 +423,7 @@ export default function Portfolio() {
           </p>
           <div className="flex gap-6 justify-center">
             <a 
-              href="mailto:marko@pavlovic.at"
+              href="mailto:marko@pvlc.at"
               className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full font-semibold hover:scale-105 transition-transform flex items-center gap-2 text-white"
             >
               <Mail size={20} />
